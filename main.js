@@ -9,11 +9,9 @@ document.querySelector('#date').innerHTML = date.toDateString();
     textarea.value = ''
     console.log(feed);
     for(let entry of feed.entries){
-        //create a list element
+        
         let li = document.createElement('li');
-        //add HTML content to list items
         li.innerHTML = `<h4><a href="${entry.link}">${entry.title}</a></h4>`;
-        //append HTML content to list 
         textarea.appendChild(li);
     }
   });
